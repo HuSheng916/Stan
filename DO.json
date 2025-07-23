@@ -267,8 +267,92 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "outbound-tag-1"
-        ]
+            "(all)"
+        ],
+        "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|South Korea|🇹🇼|台湾|TW|Taiwan|🇸🇬|新加坡|SG|Singapore|🇺🇸|美国|US|USA|United States|马来西亚|🇭🇰|香港|HK|Hong Kong"
+          ]
+        }
+      ]
+      },
+      {
+        "type": "urltest",
+        "tag": "HK",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "(all)"
+        ],
+        "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇭🇰|香港|HK|Hong Kong"
+          ]
+        }
+      ]
+      },
+      {
+        "type": "urltest",
+        "tag": "JP",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "(all)"
+        ],
+        "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇯🇵|日本|JP|Japan"
+          ]
+        }
+      ]
+      },
+      {
+        "type": "urltest",
+        "tag": "US",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "(all)"
+        ],
+        "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇺🇸|美国|US|USA|United States"
+          ]
+        }
+      ]
+      },
+      {
+        "type": "urltest",
+        "tag": "Others",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "(all)"
+        ],
+        "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇰🇷|韩国|KR|South Korea|🇹🇼|台湾|TW|Taiwan|🇸🇬|新加坡|SG|Singapore|马来西亚"
+          ]
+        }
+      ]
       },
       {
         "type": "direct",
@@ -290,8 +374,10 @@
         "outbounds": [
           "select",
           "auto",
-          "direct",
-          "fallback"
+          "HK",
+          "US",
+          "JP",
+          "Others"
         ]
       },
       {
@@ -301,8 +387,10 @@
         "outbounds": [
           "select",
           "auto",
-          "direct",
-          "fallback"
+          "HK",
+          "JP",
+          "US",
+          "Others"
         ]
       },
       {
