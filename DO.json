@@ -267,7 +267,7 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "(all)"
+            "{all}"
         ],
         "filter": [
         {
@@ -286,7 +286,7 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "(all)"
+            "{all}"
         ],
         "filter": [
         {
@@ -305,7 +305,7 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "(all)"
+            "{all}"
         ],
         "filter": [
         {
@@ -324,7 +324,7 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "(all)"
+            "{all}"
         ],
         "filter": [
         {
@@ -343,7 +343,7 @@
         "tolerance": 150,
         "interrupt_exist_connections": true,
         "outbounds": [
-            "(all)"
+            "{all}"
         ],
         "filter": [
         {
